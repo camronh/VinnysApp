@@ -1,7 +1,7 @@
 {
   "name": "vinnysapp",
   "version": "1.0.0",
-  "description": "",
+  "description": "Example App",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,5 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.25.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camronh/VinnysApp.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/camronh/VinnysApp/issues"
+  },
+  "homepage": "https://github.com/camronh/VinnysApp#readme"
 }
