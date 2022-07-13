@@ -107,11 +107,11 @@ app.post('/battlePokemon', async (req, res) => {        //need to pull body out 
   res.send(customPokemon);
 });
 
-app.listen(port, () => {     //starts localHost:3000, baseURL is localhost3000
-    console.log(`Pokemon API listening on port ${port}!`)  //start clients, check if application is running as intended
-}) 
+// app.listen(port, () => {     //starts localHost:3000, baseURL is localhost3000
+//     console.log(`Pokemon API listening on port ${port}!`)  //start clients, check if application is running as intended
+// }) 
 
-
+module.exports = app; 
 
 
 //make the endpoint readable in English
