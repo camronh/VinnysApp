@@ -94,12 +94,18 @@ app.get('/getPokemonRandom', async (req, res) => {
 });
 
 app.get('/getPokemonCustom', async (req, res) => {        //adds onto baseURL
-  //res.send(req.query);   //what we allow the user to pass in: ?
-  const pokemonID = req.query.pokemonID; //query param or path param ; in the request, get query strings, look for pokemonID one
-  //building the interface ^; make API documentation: getPokeCustom endpoint has pokemonID as the query parameter/string(? in the url)
+  try {
+    console.log(req);
+    //res.send(req.query);   //what we allow the user to pass in: ?
+    const pokemonID = req.query.pokemonID; //query param or path param ; in the request, get query strings, look for pokemonID one
+    //building the interface ^; make API documentation: getPokeCustom endpoint has pokemonID as the query parameter/string(? in the url)
 
-  const customPokemon = await getPokemonCustom(pokemonID);    //could say pokemonId = req.params; req.pathparams
-  res.send(customPokemon);
+    const customPokemon = await getPokemonCustom(pokemonID);    //could say pokemonId = req.params; req.pathparams
+    res.send(customPokemon);
+  } catch (error) {
+    console.log(error)
+    res.send(error)
+  }
 });
 
 app.post('/battlePokemon', async (req, res) => {        //need to pull body out of req (in express endpoint); and pass it into 
