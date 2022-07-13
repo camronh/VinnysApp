@@ -1,0 +1,10 @@
+{
+  "lambda": {
+    "role": "vinnysapp-executor",
+    "name": "vinnysapp",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "1o9nynqqp6"
+  }
+}
